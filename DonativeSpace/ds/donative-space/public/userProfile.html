@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Donative Space | Home Page</title>
+
+    <!-- CSS FILES -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@3.10.2/dist/fullcalendar.min.css" />
+
+    <!--
+
+TemplateMo 581 Kind Heart Charity
+
+https://templatemo.com/tm-581-kind-heart-charity
+
+-->
+
+</head>
+
+<body id="section_1">
+
+
+    <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+        <div class="container">
+            <a class="navbar-brand" href="profile.html">
+                <img src="images/logo1.png" class="logo img-fluid" alt="Kind Heart Charity">
+                <span>
+                    Donative Space
+                    <small>Non-profit Organization</small>
+                </span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#top">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_2">Sobre</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link click-scroll dropdown-toggle" href="#section_3"
+                            id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Campanhas</a>
+
+                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                            <li><a class="dropdown-item" href="organizacoesProfile.html">Organizações</a></li>
+
+                            <li><a class="dropdown-item" href="campanhasProfile.html">Campanhas</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link click-scroll dropdown-toggle" href="#section_5"
+                            id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Noticias</a>
+
+                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                            <li><a class="dropdown-item" href="news.html">Noticias Detalhes</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_6">Contacto</a>
+                    </li>
+
+                    <li class="nav-item ms-3">
+                        <a class="nav-link custom-btn custom-border-btn btn" href="donate.html">Doar</a>
+                    </li>
+
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 profile-menu"> 
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="profile-pic">
+                                <img src="images/icons/heart.png" alt="Profile Picture">
+                            </div>
+                         <!-- You can also use icon as follows: -->
+                           <!--  <i class="fas fa-user"></i> -->
+                          </a>
+                          
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="userProfile.html" id="username"><i class="fas fa-sliders-h fa-fw"></i> Username</a></li>
+                            <li><a class="dropdown-item" href="#" id="points"><i class="fas fa-sliders-h fa-fw"></i> Points</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-sliders-h fa-fw"></i> Account</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog fa-fw"></i> Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#" onclick="logout()"><i class="fas fa-sign-out-alt fa-fw"></i> Log Out</a></li>
+                          </ul>
+                        </li>
+                    </ul>
+                    
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <main>
+
+        <section class="news-detail-header-section text-center">
+            <div class="section-overlay"></div>
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12 col-12">
+                        <h1 class="text-white">Perfil</h1>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="news-section section-padding" id="section_2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12 col-12 mb-5">
+                        <h2>Informações Pessoais</h2>
+                    </div>
+                    
+                    <h5 class="m-3 custom-class"><strong>Nome:</strong></h5>
+                    <h6 class="m-3 custom-class"><span id="name"></span></h6>
+
+                    <h5 class="m-3 custom-class"><strong>Email:</strong></h5>
+                    <h6 class="m-3 custom-class"><span id="email"></span></h6>
+
+                    <h5 class="m-3 custom-class"><strong>Points:</strong></h5>
+                    <h6 class="m-3 custom-class"><span id="point"></span></h6>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="news-section section-padding" id="section_3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-12 mb-5">
+                        <h2>Doações</h2>
+                    </div>
+        
+                    <div class="col-lg-12 col-12">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Observacao</th>
+                                    <th>Categoria</th>
+                                    <th>Organizacao</th>
+                                    <th>Entrega</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableBody">
+                                <!-- Table rows will be dynamically added here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="news-section section-padding" id="section_3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-12 mb-5">
+                        <h2>Voluntariado</h2>
+                    </div>
+        
+                    <div class="col-lg-12 col-12">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Organizacao</th>
+                                    <th>Campanha</th>
+                                    <th>Data Inicio</th>
+                                    <th>Data Fim</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableBody1">
+                                <!-- Table rows will be dynamically added here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="news-section section-padding" id="section_6">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12 col-12 mb-5">
+                        <h2>Calendario</h2>
+                    </div>
+                    
+
+                    <div class="col-12 mt-2" id="calendar"></div>
+                        
+                    
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="site-footer-bottom">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-7 col-12">
+                        <p class="copyright-text mb-0">Copyright © 2036 <a href="#">Kind Heart</a> Charity Org.
+                            Design: <a href="https://templatemo.com" target="_blank">TemplateMo</a><br>Distribution:
+                            <a href="https://themewagon.com">ThemeWagon</a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
+                        <ul class="social-icon">
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-twitter"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-facebook"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-instagram"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-linkedin"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="https://youtube.com/templatemo" class="social-icon-link bi-youtube"></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="javascripts/requests/usersRequests.js"></script>
+    <script src="javascripts/utils/verifications.js"></script>
+    <script src="javascripts/userProfile.js"></script>
+    <script src="javascripts/requests/tableDoacaoRequest.js"></script>
+    <script src="javascripts/requests/tableVoluntarioRequest.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/custom.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.10.2/dist/fullcalendar.min.js"></script>
+
+</body>
+
+</html>

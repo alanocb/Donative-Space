@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Donative Space | Donation Page</title>
+
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--
+
+TemplateMo 581 Kind Heart Charity
+
+https://templatemo.com/tm-581-kind-heart-charity
+
+-->
+</head>
+
+<body>
+
+    
+    <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+        <div class="container">
+            <a class="navbar-brand" href="profile.html">
+                <img src="images/logo1.png" class="logo img-fluid" alt="Kind Heart Charity">
+                <span>
+                    Donative Space
+                    <small>Non-profit Organization</small>
+                </span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#top">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_2">Sobre</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link click-scroll dropdown-toggle" href="#section_3"
+                            id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Campanhas</a>
+
+                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                            <li><a class="dropdown-item" href="organizacoesProfile.html">Organizações</a></li>
+
+                            <li><a class="dropdown-item" href="campanhas.html">Campanhas</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link click-scroll dropdown-toggle" href="#section_5"
+                            id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Noticias</a>
+
+                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                            <li><a class="dropdown-item" href="news.html">Noticias Detalhes</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_6">Contacto</a>
+                    </li>
+
+                    <li class="nav-item ms-3">
+                        <a class="nav-link custom-btn custom-border-btn btn" href="donate.html">Doar</a>
+                    </li>
+
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 profile-menu"> 
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="profile-pic">
+                                <img src="images/icons/heart.png" alt="Profile Picture">
+                            </div>
+                         <!-- You can also use icon as follows: -->
+                           <!--  <i class="fas fa-user"></i> -->
+                          </a>
+                          
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="userProfile.html" id="username"><i class="fas fa-sliders-h fa-fw"></i> Username</a></li>
+                            <li><a class="dropdown-item" href="#" id="points"><i class="fas fa-sliders-h fa-fw"></i> Points</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-sliders-h fa-fw"></i> Account</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog fa-fw"></i> Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#" onclick="logout()"><i class="fas fa-sign-out-alt fa-fw"></i> Log Out</a></li>
+                          </ul>
+                        </li>
+                    </ul>
+                    
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <main>
+
+        <section class="donate-section">
+            <div class="section-overlay"></div>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12 mx-auto">
+                        <form id="donation-form" class="custom-form donate-form" action="#" method="post" role="form">
+                            <h3 class="mb-4">Doação Fisica</h3>
+
+                            <div class="row">
+                                
+                                <div class="col-lg-12 col-12">
+                                    <h5 class="mt-1">Informação Pessoal</h5>
+                                </div>
+
+                                <div class="col-lg-6 col-12 mt-2">
+                                    <input type="text" name="donation-name" id="donation-name" class="form-control"
+                                        placeholder="Jack Doe" required>
+                                </div>
+
+                                <div class="col-lg-6 col-12 mt-2">
+                                    <input type="email" name="donation-email" id="donation-email"
+                                        pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Jackdoe@gmail.com"
+                                        required>
+                                </div>
+
+                                <div class="col-lg-6 col-12 mt-2">
+                                    <input type="number" name="donation-name" id="donation-phone" class="form-control"
+                                        placeholder="Telefone" required>
+                                </div>
+
+
+                                <div class="col-lg-12 col-12">
+                                    <h5 class="mt-2 mb-3">Informação da Doacão</h5>
+                                </div>
+
+                                <div class="col-lg-6 col-12 mt-2">
+                                    <select class="form-select" name="donation-type" id="donation-type"  required>
+                                        <option value="" disabled selected>Tipo de doacão</option>
+                                        
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-6 col-12 mt-2">
+                                    <select class="form-select" name="donation-org" id="donation-org" required>
+                                        <option value="" disabled selected>Selecione a Organização</option>
+                                        
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-6 col-12 mt-2">
+                                    <textarea name="donation-comment" id="donation-comment" class="form-control" placeholder="Observação"></textarea>
+                                </div>
+
+                                
+                                <div class="col-lg-12 col-12">
+                                    <h5 class="mt-4 pt-1">Local de Recolha</h5>
+                                </div>
+
+                                <div class="col-lg-12 col-12 mt-2">
+                                    <div class="col-lg-6 col-12 mt-2">
+                                        <select class="form-select" name="donation-loc" id="donation-loc" required>
+                                            <option value="" disabled selected>Selecione o local de recolha</option>
+                                            
+                                        </select>
+                                    </div>
+
+                                    
+
+                                    <button type="submit" class="form-control mt-4">Submeter Doacão</button>
+                                </div>
+
+
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mx-auto">
+                        <form id="voluntariado-form" class="custom-form donate-form" action="#" method="post" role="form">
+                            <h3 class="mb-4">Voluntariado</h3>
+
+                            <div class="row">
+                                
+                                <div class="col-lg-12 col-12">
+                                    <h5 class="mt-1">Informação Pessoal</h5>
+                                </div>
+
+                                <div class="col-lg-6 col-12 mt-2">
+                                    <input type="text" name="voluntariado-name" id="voluntariado-name" class="form-control"
+                                        placeholder="Jack Doe" required>
+                                </div>
+
+                                <div class="col-lg-6 col-12 mt-2">
+                                    <input type="email" name="voluntariado-email" id="voluntariado-email"
+                                        pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Jackdoe@gmail.com"
+                                        required>
+                                </div>
+
+                                <div class="col-lg-6 col-12 mt-2">
+                                    <input type="number" name="voluntariado-phone" id="voluntariado-phone" class="form-control"
+                                        placeholder="Telefone" required>
+                                </div>
+
+                                <div class="col-lg-12 col-12">
+                                    <h5 class="mt-2 mb-3">Informação Voluntariado</h5>
+                                </div>
+
+                                <div class="col-lg-6 col-12 mt-2">
+                                    <select class="form-select" name="voluntariado-camp" id="voluntariado-camp"  required>
+                                        <option value="" disabled selected>Campanha</option>
+                                        
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-6 col-12 mt-2">
+                                    <input type="text" name="vagas-info" id="vagas-info" class="form-control" placeholder="Vagas" readonly>
+                                </div>
+
+                                <div class="col-12 mt-2" id="calendar"></div>
+
+                            
+                                    <button type="submit" class="form-control mt-4">Submeter Inscrição</button>
+                                </div>
+
+
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+            
+    </main>
+
+        <div class="site-footer-bottom">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-7 col-12">
+                        <p class="copyright-text mb-0">Copyright © 2036 <a href="#">Kind Heart</a> Charity Org.
+                            Design: <a href="https://templatemo.com" target="_blank">TemplateMo</a><br>Distribution:
+                            <a href="https://themewagon.com">ThemeWagon</a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
+                        <ul class="social-icon">
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-twitter"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-facebook"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-instagram"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-linkedin"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="https://youtube.com/templatemo" class="social-icon-link bi-youtube"></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="javascripts/donate.js"></script>
+    <script src="javascripts/utils/verifications.js"></script>
+    <script src="javascripts/requests/organizacaoRequest.js"></script>
+    <script src="javascripts/requests/categoriaRequest.js"></script>
+    <script src="javascripts/requests/entregaRequest.js"></script>
+    <script src="javascripts/requests/campanhasRequests.js"></script>
+    <script src="javascripts/requests/usersRequests.js"></script>
+    <script src="javascripts/requests/voluntarioRequests.js"></script>
+    <script src="javascripts/requests/donativofisicoRequest.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/custom.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+<!-- FullCalendar JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+
+</body>
+
+</html>

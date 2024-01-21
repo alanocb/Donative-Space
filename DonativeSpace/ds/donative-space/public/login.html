@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/button.css">
+
+    <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+
+	<body id="section_1">
+
+
+		<nav class="navbar navbar-expand-lg bg-light shadow-lg">
+			<div class="container">
+				<a class="navbar-brand" href="index.html">
+					<img src="images/logo1.png" class="logo img-fluid" alt="Kind Heart Charity">
+					<span>
+						Donative Space
+						<small>Non-profit Organization</small>
+					</span>
+				</a>
+	
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+					aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+	
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a class="nav-link click-scroll" href="#top">Home</a>
+						</li>
+	
+						<li class="nav-item">
+							<a class="nav-link click-scroll" href="#section_2">Sobre</a>
+						</li>
+	
+						<li class="nav-item dropdown">
+							<a class="nav-link click-scroll dropdown-toggle" href="#section_3"
+								id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+								aria-expanded="false">Campanhas</a>
+	
+							<ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+								<li><a class="dropdown-item" href="organizacoes.html">Organizações</a></li>
+	
+								<li><a class="dropdown-item" href="campanhas.html">Campanhas</a></li>
+							</ul>
+						</li>
+	
+						<li class="nav-item dropdown">
+							<a class="nav-link click-scroll dropdown-toggle" href="#section_5"
+								id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+								aria-expanded="false">Noticias</a>
+	
+							<ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+								<li><a class="dropdown-item" href="news.html">Noticias Detalhes</a></li>
+	
+							</ul>
+						</li>
+	
+						<li class="nav-item">
+							<a class="nav-link click-scroll" href="#section_6">Contacto</a>
+						</li>
+	
+						<li class="nav-item ms-3">
+							<a class="nav-link custom-btn custom-border-btn btn" href="donate.html">Doar</a>
+						</li>
+	
+						<li class="nav-item">
+							<a class="nav-link click-scroll" href="login.html">Login<span>/</span>Registo</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+    
+  <div id="cont" class="cont">
+		<!-- FORM SECTION -->
+		<div class="row">
+			<!-- SIGN UP -->
+			<div class="col align-items-center flex-col sign-up">
+				<div class="form-wrapper align-items-center">
+					<div class="form sign-up">
+						<div class="input-group">
+							<i class='bx bxs-user'></i>
+							<input type="text" placeholder="Username" id="Reg-name">
+						</div>
+						<div class="input-group">
+							<i class='bx bx-mail-send'></i>
+							<input type="email" placeholder="Email" id="Reg-email">
+						</div>
+						<div class="input-group">
+							<i class='bx bxs-lock-alt'></i>
+							<input type="password" placeholder="Password" id="Reg-password">
+						</div>
+						<div class="input-group">
+							<i class='bx bxs-lock-alt'></i>
+							<input type="password" placeholder="Confirm password">
+						</div>
+						<button onclick="register()">
+							Sign up
+						</button>
+						<p id="Reg-msg"></p>
+						<p>
+							<span>
+								Already have an account?
+							</span>
+							<b onclick="toggle()" class="pointer">
+								Sign in here
+							</b>
+						</p>
+					</div>
+				
+				</div>
+
+			
+			</div>
+			<!-- END SIGN UP -->
+			<!-- SIGN IN -->
+			<div class="col align-items-center flex-col sign-in">
+				<div class="form-wrapper align-items-center">
+					<div class="form sign-in">
+						<div class="input-group">
+							<i class='bx bxs-user'></i>
+							<input type="text" placeholder="Username" id="name">
+						</div>
+						<div class="input-group">
+							<i class='bx bxs-lock-alt'></i>
+							<input type="password" placeholder="Password" id="password">
+						</div>
+						<button onclick="login()">
+							Sign in
+						</button>
+						<p id="msg"></p>
+						<p>
+							<b>
+								Forgot password?
+							</b>
+						</p>
+						<p>
+							<span>
+								Don't have an account?
+							</span>
+							<b onclick="toggle()" class="pointer">
+								Sign up here
+							</b>
+						</p>
+					</div>
+					
+				</div>
+				<div class="containerB">
+
+					<a href="loginOrgs.html" class="button type--A">
+					  <div class="button__line"></div>
+					  <div class="button__line"></div>
+					  <span class="button__text">Organização Login</span>
+					  <div class="button__drow1"></div>
+					  <div class="button__drow2"></div>
+					</a>
+				</div>
+				<div class="form-wrapper">
+		
+				</div>
+			</div>
+			<!-- END SIGN IN -->
+		</div>
+		<!-- END FORM SECTION -->
+		<!-- CONTENT SECTION -->
+		<div class="row content-row">
+			<!-- SIGN IN CONTENT -->
+			<div class="col align-items-center flex-col">
+				<div class="text sign-in">
+					<h2 id="welcome">
+						Welcome User
+					</h2>
+	
+				</div>
+				<div class="img sign-in">
+		
+				</div>
+			</div>
+			<!-- END SIGN IN CONTENT -->
+			<!-- SIGN UP CONTENT -->
+			<div class="col align-items-center flex-col">
+				<div class="img sign-up">
+				
+				</div>
+				<div class="text sign-up">
+					<h2 id="welcome">
+						Join with us
+					</h2>
+	
+				</div>
+			</div>
+			<!-- END SIGN UP CONTENT -->
+		</div>
+		<!-- END CONTENT SECTION -->
+	</div>
+    <script src="javascripts/login.js"></script>
+	<script src="javascripts/utils/verifications.js"></script>
+	<script src="javascripts/requests/usersRequests.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/click-scroll.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>

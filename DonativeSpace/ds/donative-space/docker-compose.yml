@@ -1,0 +1,61 @@
+version: "3"
+services:
+  node-app:
+    build: .
+    environment:
+      PORT: 8080
+
+  postgresql-master:
+    image: bitnami/postgresql
+    restart: always
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgresql_master_data:/bitnami/postgresql
+      - ./db.sql:/docker-entrypoint-initdb.d/db.sql
+    environment:
+      POSTGRESQL_PGAUDIT_LOG: READ,WRITE
+      POSTGRESQL_LOG_HOSTNAME: true
+      POSTGRESQL_REPLICATION_MODE: master
+      POSTGRESQL_REPLICATION_USER: teste
+      POSTGRESQL_REPLICATION_PASSWORD: 12345
+      POSTGRESQL_USERNAME: postgres
+      POSTGRESQL_PASSWORD: 
+      POSTGRESQL_DATABASE: test
+      ALLOW_EMPTY_PASSWORD: "yes"
+
+  postgresql-slave:
+    image: bitnami/postgresql
+    restart: always
+    ports:
+      - "5434:5432"
+    depends_on:
+      - postgresql-master
+    environment:
+      POSTGRESQL_PASSWORD: 
+      POSTGRESQL_MASTER_HOST: postgresql-master
+      POSTGRESQL_PGAUDIT_LOG: READ
+      POSTGRESQL_LOG_HOSTNAME: true
+      POSTGRESQL_REPLICATION_MODE: slave
+      POSTGRESQL_REPLICATION_USER: teste
+      POSTGRESQL_REPLICATION_PASSWORD: 12345
+      POSTGRESQL_MASTER_PORT_NUMBER: 5432
+      ALLOW_EMPTY_PASSWORD: "yes"
+    volumes:
+      - postgresql_slave_data:/bitnami/postgresql
+
+  nginx:
+    image: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - node-app
+
+
+volumes:
+  postgresql_master_data:
+    driver: local
+  postgresql_slave_data:
+    driver: local
